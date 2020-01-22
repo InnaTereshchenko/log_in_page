@@ -1,7 +1,7 @@
-.login-form {
+.reset {
   width: 280px;
-  color: #646c85;
-  background-color: #10172f;
+  display: flex;
+  flex-flow: column nowrap;
 
   &__header {
     margin: 0;
@@ -9,48 +9,18 @@
     font-size: 32px;
   }
 
-  &__text {
-    font-size: 16px;
-    margin: 10px 0;
-  }
-
   &__form {
     display: flex;
     flex-flow: column;
   }
 
-  &__email,
-  &__password {
+  &__email {
     color: white;
     font-weight: bold;
     font-size: 17px;
     border-bottom: 1px solid #333a52;
     padding: 15px 0;
     margin-top: 20px;
-  }
-
-  &__email:focus,
-  &__password:focus {
-    border-bottom: 1px solid #4dbcfd;
-    transition: all 300ms;
-  }
-
-  &__email:valid,
-  &__password:valid {
-    border-bottom: 1px solid #21be9a;
-    transition: all 300ms;
-  }
-
-  &__email::placeholder,
-  &__password::placeholder {
-    color: #4f5b77;
-    font-weight: bold;
-    font-size: 17px;
-  }
-
-  &__link {
-    color: #008ada;
-    font-weight: bold;
   }
 
   &__button {
@@ -88,11 +58,4 @@
     opacity: 1;
   }
 
-  &__forgot {
-    font-size: 16px;
-  }
-
-  &__link {
-    margin-left: 5px;
-  }
 }

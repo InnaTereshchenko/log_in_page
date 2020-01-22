@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 import './LogIn.scss';
 
 const LogIn = () => {
@@ -30,7 +31,7 @@ const LogIn = () => {
       </form>
       <p className="login-form__forgot">
         Forgot your password?
-        <a href="/" className="login-form__link">Reset</a>
+        <NavLink to="/reset" exact className="login-form__link">Reset</NavLink>
       </p>
     </section>
   );
