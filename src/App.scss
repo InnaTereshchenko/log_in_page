@@ -1,0 +1,19 @@
+.page {
+  width: 100vw;
+  height: 100vh;
+  background-color: #10172f;
+
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.background {
+  width: 50%;
+  height: 100vh;
+  background: linear-gradient(113deg,
+  rgba(107, 168, 220, 1) 0%,
+  rgba(84, 73, 182, 1) 100%);
+  position: absolute;
+}

@@ -1,0 +1,49 @@
+.support {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  color: white;
+  z-index: 1;
+
+  &__logo {
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo-text {
+    font-weight: 300;
+    margin-left: 10px;
+    font-size: 24px;
+    color: #a5bde4;
+    font-family: "Museo Sans Cyrl 300", sans-serif;
+  }
+
+  &__text {
+    font-size: 18px;
+    font-weight: 300;
+    margin-top: 30px;
+    margin-bottom: 25px;
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+  }
+
+  &__button {
+    width: 130px;
+    height: 40px;
+    background-color: #7e96d4;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    font-size: 12px;
+    cursor: pointer;
+  }
+
+  &__or {
+    margin: 0 12px;
+    font-weight: 300;
+  }
+}
