@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useHistory } from 'react-router-dom';
 import cn from 'classnames';
 import './LogIn.scss';
 
@@ -10,6 +10,7 @@ const LogIn = () => {
   const [passwordError, setPasswordError] = useState(false);
   const [isEmailValid, setisEmailValid] = useState(false);
   const [isPasswordlValid, setisPasswordValid] = useState(false);
+  const history = useHistory();
   const emailPattern = new RegExp(
     '^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,4}$'
   );
@@ -30,7 +31,7 @@ const LogIn = () => {
     }
 
     if (email === rightEmail && password === rightPassword) {
-      window.location.assign('http://localhost:3000/#/dashboard');
+      history.push('/dashboard');
     }
   };
 
@@ -95,7 +96,7 @@ const LogIn = () => {
           </NavLink>
         </p>
       </div>
-      <div>
+      <div className="login-form__error-box">
         <div className={cn('login-form__error', {
           'login-form__error-email': emailError,
         })}

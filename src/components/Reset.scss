@@ -78,4 +78,12 @@
     text-decoration: underline;
   }
 
+  @media screen and (min-width: 599px) and (max-width: 750px) {
+    margin: 30px 25%;
+  }
+
+  @media screen and (min-width: 751px) and (max-width: 1000px) {
+    margin: 30px 33%;
+  }
+
 }

@@ -7,13 +7,50 @@
   flex-flow: row nowrap;
   justify-content: space-around;
   align-items: center;
+
+  @media screen and (max-width: 1000px) and (min-width: 600px) {
+    display: block;
+  }
 }
 
 .background {
-  width: 50%;
+  width: 55%;
   height: 100vh;
+  background: #10172f;
+  position: absolute;
+  overflow: hidden;
+
+  @media screen and (max-width: 1000px) and (min-width: 600px) {
+    display: none;
+  }
+
+  @media screen and (min-width: 320px) and (max-width: 598px) {
+    display: none;
+  }
+
+  @media screen and (min-width: 1001px) and (max-width: 1099px) {
+    width: 50%;
+  }
+}
+
+.background:after {
+  content: "";
+  width: 200%;
+  height: 300%;
+  top: -100%;
+  left: -105%;
+  border-radius: 50%;
   background: linear-gradient(160deg,
   rgba(107, 168, 220, 1) 25%,
   rgba(84, 73, 182, 1) 80%);
   position: absolute;
+
+  @media screen and (max-width: 1000px) and (min-width: 600px) {
+    display: none;
+  }
+
+  @media screen and (min-width: 320px) and (max-width: 598px) {
+    display: none;
+  }
+
 }
