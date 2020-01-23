@@ -1,9 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './LogIn.scss';
 
 const LogIn = () => {
-  const [email, setEmail] = useState('');
+  // eslint-disable-next-line no-unused-vars
+  const emailPattern = new RegExp(
+    '^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,4}$'
+  );
 
   return (
     <section className="login-form">
@@ -14,8 +17,6 @@ const LogIn = () => {
       <form className="login-form__form">
         <input
           type="email"
-          value={email}
-          onChange={e => setEmail(e.target.value)}
           required
           placeholder="Your email"
           className="login-form__email"
@@ -23,11 +24,18 @@ const LogIn = () => {
         <input
           type="password"
           placeholder="Password"
-          className="login-form__password"
           required
+          className="login-form__password"
           minLength={8}
         />
-        <button type="submit" className="login-form__button">LOG IN</button>
+        <button type="submit" className="login-form__button">
+          LOG IN
+          <img
+            src="./images/right-arrow.png"
+            className="login-form__arrow"
+            alt="arrow"
+          />
+        </button>
       </form>
       <p className="login-form__forgot">
         Forgot your password?

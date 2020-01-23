@@ -41,6 +41,11 @@
     transition: all 300ms;
   }
 
+  .swing {
+    animation: swing 0.8s ease;
+    animation-iteration-count: 3;
+  }
+
   &__email::placeholder,
   &__password::placeholder {
     color: #4f5b77;
@@ -95,4 +100,59 @@
   &__link {
     margin-left: 5px;
   }
+
+  &__link:hover {
+    text-decoration: underline;
+  }
+
+  &__arrow {
+    width: 13px;
+    height: 13px;
+    margin-left: 7px;
+    transition: all 300ms ease-in;
+  }
+
+  &__button:hover {
+    .login-form__arrow {
+      transform: translateX(10px);
+
+    }
+  }
+}
+
+@keyframes swing {
+  15% {
+    -webkit-transform: translateX(9px);
+    transform: translateX(9px);
+  }
+  30% {
+    -webkit-transform: translateX(-9px);
+    transform: translateX(-9px);
+  }
+  40% {
+    -webkit-transform: translateX(6px);
+    transform: translateX(6px);
+  }
+  50% {
+    -webkit-transform: translateX(-6px);
+    transform: translateX(-6px);
+  }
+  65% {
+    -webkit-transform: translateX(3px);
+    transform: translateX(3px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+.valid {
+  border-bottom: 1px solid #21be9a;
+  transition: all 300ms;
+}
+
+.not-valid {
+  border-bottom: 1px solid #ba1848;
+  transition: all 300ms;
 }

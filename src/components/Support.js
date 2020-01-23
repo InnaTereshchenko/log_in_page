@@ -5,7 +5,7 @@ const Support = () => (
   <section className="support">
     <div className="support__logo">
       <img src="./images/IO_technologies_logo.png" alt="IO" height="30" />
-      <h1 className="support__logo-text">Technologies</h1>
+      <h2 className="support__logo-text">Technologies</h2>
     </div>
     <p className="support__text">
       Get how-to help and instructions or specific features in

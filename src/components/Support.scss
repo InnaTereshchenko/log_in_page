@@ -31,15 +31,36 @@
   }
 
   &__button {
+    position: relative;
     width: 130px;
     height: 40px;
-    background-color: #7e96d4;
+    background: linear-gradient(150deg, rgba(126,150,212,1) 21%, rgba(95,120,200,1) 85%);
     border: none;
     border-radius: 5px;
     color: white;
     font-weight: bold;
     font-size: 12px;
     cursor: pointer;
+    z-index: 1;
+    outline: none;
+  }
+
+  &__button::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0;
+    border-radius: 5px;
+    background: linear-gradient(150deg, rgba(98,123,201,1) 31%, rgba(126,150,212,1) 88%);
+    transition: all 300ms ease-in;
+  }
+
+  &__button:hover::after {
+    opacity: 1;
   }
 
   &__or {
