@@ -9,7 +9,11 @@ import Dashboard from './components/Dashboard';
 function App() {
   return (
     <div>
-      <div className="background" />
+      <div className="background">
+        <div className="wave-1" />
+        <div className="wave-2" />
+        <div className="wave-3" />
+      </div>
       <div className="page">
         <Support />
         <Switch>
