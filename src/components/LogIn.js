@@ -8,7 +8,8 @@ const LogIn = () => {
   const [password, setPassword] = useState('');
   const [emailError, setEmailError] = useState(false);
   const [passwordError, setPasswordError] = useState(false);
-  // eslint-disable-next-line no-unused-vars
+  const [isEmailValid, setisEmailValid] = useState(false);
+  const [isPasswordlValid, setisPasswordValid] = useState(false);
   const emailPattern = new RegExp(
     '^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,4}$'
   );
@@ -20,10 +21,12 @@ const LogIn = () => {
     event.preventDefault();
     if (email !== rightEmail) {
       setEmailError(true);
+      setisEmailValid(false);
     }
 
     if (password !== rightPassword) {
       setPasswordError(true);
+      setisPasswordValid(false);
     }
 
     if (email === rightEmail && password === rightPassword) {
@@ -34,11 +37,13 @@ const LogIn = () => {
   const handleEmailValue = (e) => {
     setEmail(e.target.value);
     setEmailError(false);
+    setisEmailValid(emailPattern.test(e.target.value));
   };
 
-  const handlePasswordlValue = (e) => {
+  const handlePasswordValue = (e) => {
     setPassword(e.target.value);
     setPasswordError(false);
+    setisPasswordValid(e.target.value.length === 8);
   };
 
   return (
@@ -57,17 +62,19 @@ const LogIn = () => {
             placeholder="Your email"
             className={cn('login-form__email', {
               'not-valid': emailError,
+              valid: isEmailValid,
               swing: emailError,
             })}
           />
           <input
             type="password"
             value={password}
-            onChange={handlePasswordlValue}
+            onChange={handlePasswordValue}
             placeholder="Password"
             required
             className={cn('login-form__password', {
               'not-valid': passwordError,
+              valid: isPasswordlValid,
               swing: emailError,
             })}
             minLength={8}

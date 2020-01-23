@@ -36,11 +36,11 @@
     transition: all 300ms;
   }
 
-  &__email:valid:focus,
-  &__password:valid:focus {
-    border-bottom: 1px solid #21be9a;
-    transition: all 300ms;
-  }
+  //&__email:valid:focus,
+  //&__password:valid:focus {
+  //  border-bottom: 1px solid #21be9a;
+  //  transition: all 300ms;
+  //}
 
   .swing {
     animation: swing 0.8s ease;
@@ -131,6 +131,16 @@
     visibility: hidden;
   }
 
+  &__error::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    transform: rotate(45deg);
+    left: -5px;
+    background-color: #eeeff0;
+  }
+
   &__error-email {
     position: relative;
     top: 87px;
@@ -171,12 +181,12 @@
   }
 }
 
-//.valid {
-//  border-bottom: 1px solid #21be9a;
-//  transition: all 300ms;
-//}
-
 .not-valid {
   border-bottom: 1px solid #ba1848;
+  transition: all 300ms;
+}
+
+.valid {
+  border-bottom: 1px solid #21be9a;
   transition: all 300ms;
 }
