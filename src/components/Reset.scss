@@ -1,7 +1,8 @@
 .reset {
-  width: 280px;
+  width: 430px;
   display: flex;
   flex-flow: column nowrap;
+  color: #646c85;
 
   &__header {
     margin: 0;
@@ -10,6 +11,7 @@
   }
 
   &__form {
+    width: 280px;
     display: flex;
     flex-flow: column;
   }
@@ -21,6 +23,10 @@
     border-bottom: 1px solid #333a52;
     padding: 15px 0;
     margin-top: 20px;
+  }
+
+  &__email::placeholder {
+    color: #646c85;
   }
 
   &__button {
@@ -56,6 +62,20 @@
 
   &__button:hover::after {
     opacity: 1;
+  }
+
+  &__remembered {
+    font-size: 16px;
+  }
+
+  &__link {
+    margin-left: 5px;
+    color: #008ada;
+    font-weight: bold;
+  }
+
+  &__link:hover {
+    text-decoration: underline;
   }
 
 }

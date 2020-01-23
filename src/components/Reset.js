@@ -1,5 +1,6 @@
 import React from 'react';
 import './Reset.scss';
+import { NavLink } from 'react-router-dom';
 
 const Reset = () => (
   <section className="reset">
@@ -15,6 +16,12 @@ const Reset = () => (
         SEND ME INSTRUCTIONS
       </button>
     </form>
+    <p className="reset__remembered">
+      Remembered password?
+      <NavLink to="/" exact className="reset__link">
+        Log in
+      </NavLink>
+    </p>
   </section>
 );
 
